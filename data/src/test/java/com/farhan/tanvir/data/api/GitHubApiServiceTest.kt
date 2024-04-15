@@ -1,7 +1,6 @@
-package com.farhan.tanvir.data
+package com.farhan.tanvir.data.api
 
 import com.farhan.tanvir.common.Constant
-import com.farhan.tanvir.data.api.GithubApiService
 import junit.framework.TestCase.assertEquals
 import junit.framework.TestCase.assertFalse
 import junit.framework.TestCase.assertNotNull
