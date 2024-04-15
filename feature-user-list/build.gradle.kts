@@ -65,4 +65,8 @@ dependencies {
 
     // Coil
     implementation(libs.coil)
+
+    testImplementation(libs.mockk)
+    testImplementation(libs.coroutinesTest)
+    testImplementation(libs.archCoreTesting)
 }

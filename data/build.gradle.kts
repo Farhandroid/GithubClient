@@ -48,4 +48,8 @@ dependencies {
 
     // Retrofit
     implementation(libs.retrofit)
+    implementation(libs.retrofitSerializationConverter)
+
+    testImplementation(libs.mockWebServer)
+    testImplementation(libs.okhttp)
 }

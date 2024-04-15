@@ -22,6 +22,9 @@ fragmentKtx = "1.6.2"
 coil = "2.6.0"
 kotlinSerialization = "1.9.21"
 okhttp = "4.12.0"
+mockk = "1.13.5"
+coroutinesTest = "1.7.1"
+archCoreTesting = "2.2.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -46,6 +49,10 @@ androidx-fragment-ktx = { group = "androidx.fragment", name = "fragment-ktx", ve
 coil = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 retrofitSerializationConverter = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+mockWebServer = { group = "com.squareup.okhttp3", name = "mockwebserver", version.ref = "okhttp" }
+mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
+coroutinesTest = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+archCoreTesting = { group = "androidx.arch.core", name = "core-testing", version.ref = "archCoreTesting" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
