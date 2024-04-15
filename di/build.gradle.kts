@@ -27,6 +27,11 @@ android {
                 "BASE_URL",
                 "\"https://api.github.com/\"",
             )
+            buildConfigField(
+                "String",
+                "AUTH_KEY",
+                "\"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\"",
+            )
         }
         release {
             buildConfigField(
@@ -34,6 +39,12 @@ android {
                 "BASE_URL",
                 "\"https://api.github.com/\"",
             )
+            buildConfigField(
+                "String",
+                "AUTH_KEY",
+                "\"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\"",
+            )
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
