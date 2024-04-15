@@ -27,7 +27,8 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
             app:layout_constraintBottom_toBottomOf="@id/profileIV"
             app:layout_constraintStart_toEndOf="@id/profileIV"
-            app:layout_constraintTop_toTopOf="@id/profileIV" />
+            app:layout_constraintTop_toTopOf="@id/profileIV"
+            tools:text="Name"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
