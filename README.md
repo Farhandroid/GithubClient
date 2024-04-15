@@ -10,6 +10,9 @@ GitHubClientは、ユーザーがGitHubのユーザープロファイルや公�
 - **詳細ユーザープロファイル**: ユーザーを選択すると、詳細なプロファイルページが表示されます。このページには、ユーザーのアバター、フルネーム、フォロワー数、フォロー数、および公開されている非フォークリポジトリの詳細なリストが含まれています。
 - **リポジトリの詳細**: ユーザープロファイルの下にリストされているリポジトリのいずれかをクリックすると、WebViewを通じてリポジトリのより詳細な情報を表示でき、GitHubとの直接的な対話が可能になります。
 
+#### <br/><br/>以下から最新のGitHubClientアプリのAPKをダウンロードしてください 👇
+[![GitHubClient](https://img.shields.io/badge/GitHubClient-APK-blue)](https://github.com/Farhandroid/GithubClient/releases/download/v1.0.0/GitHubClient.apk)
+
 ## <br/><br/>GitHubClient アプリのアーキテクチャとモジュールの依存関係
 <img width="403" alt="Screenshot 2024-04-15 at 19 12 19" src="https://github.com/Farhandroid/GithubClient/assets/32593150/ecf4ef43-aa5b-44d7-bd12-88e3d27a907e">
 
@@ -44,7 +47,7 @@ GitHubClientは、ユーザーがGitHubのユーザープロファイルや公�
 - [MockK](https://mockk.io/)
 - [KSP (Kotlin Symbol Processing)](https://github.com/google/ksp)
 
-## <br/><br/>デモ
+## <br/><br/>デモ📸
 
 https://github.com/Farhandroid/GithubClient/assets/32593150/ea6f0e3b-ab4d-4a3f-9f2e-e8cdb12f642e
 
