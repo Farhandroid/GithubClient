@@ -14,7 +14,14 @@ class UserRepositoryImpl(private val githubApiService: GithubApiService) : UserR
             if (response.isSuccessful && response.body() != null) {
                 ResourceState.Success(response.body())
             } else {
-                ResourceState.Error(response.message().ifEmpty { "Unknown error" })
+                val errorBody = response.errorBody()?.string()
+                val errorResponse =
+                    if (errorBody.isNullOrEmpty()) {
+                        response.message() ?: "Unknown error"
+                    } else {
+                        errorBody
+                    }
+                ResourceState.Error(errorResponse)
             }
         } catch (e: Exception) {
             ResourceState.Error(e.localizedMessage ?: "Unknown Error")
@@ -27,7 +34,14 @@ class UserRepositoryImpl(private val githubApiService: GithubApiService) : UserR
             if (response.isSuccessful && response.body() != null) {
                 ResourceState.Success(response.body())
             } else {
-                ResourceState.Error(response.message().ifEmpty { "Unknown error" })
+                val errorBody = response.errorBody()?.string()
+                val errorResponse =
+                    if (errorBody.isNullOrEmpty()) {
+                        response.message() ?: "Unknown error"
+                    } else {
+                        errorBody
+                    }
+                ResourceState.Error(errorResponse)
             }
         } catch (e: Exception) {
             ResourceState.Error(e.localizedMessage ?: "Unknown Error")
@@ -44,7 +58,14 @@ class UserRepositoryImpl(private val githubApiService: GithubApiService) : UserR
                     }
                 ResourceState.Success(nonForkedRepositories)
             } else {
-                ResourceState.Error(response.message().ifEmpty { "Unknown error" })
+                val errorBody = response.errorBody()?.string()
+                val errorResponse =
+                    if (errorBody.isNullOrEmpty()) {
+                        response.message() ?: "Unknown error"
+                    } else {
+                        errorBody
+                    }
+                ResourceState.Error(errorResponse)
             }
         } catch (e: Exception) {
             ResourceState.Error(e.localizedMessage ?: "Unknown Error")
