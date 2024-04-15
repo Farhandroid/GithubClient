@@ -11,7 +11,7 @@ data class User(
     val login: String,
     @SerialName("node_id")
     val nodeId: String? = null,
-    @SerialName("avatar_url") val avatarUrl: String,
+    @SerialName("avatar_url") val avatarUrl: String? = null,
     @SerialName("gravatar_id")
     val gravatarId: String? = null,
     @SerialName("url")
