@@ -40,7 +40,6 @@ android {
 dependencies {
 
     implementation(project(":feature-user-list"))
-    implementation(project(":di"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
