@@ -1,6 +1,5 @@
 package com.farhan.tanvir.feature_user_list.list
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.farhan.tanvir.common.ResourceState
@@ -36,13 +35,16 @@ class UserListViewModel
             getUserList()
         }
 
-        private fun getUserList() =
+        internal fun getUserList() =
             viewModelScope.launch(dispatcher) {
                 _onUserListUiStateChanged.send(UserListUiState.Loading)
                 when (val result = getUserListUseCase.invoke()) {
                     is ResourceState.Error -> {
-                        Log.d("apiLog", "getUserList error")
-                        _onUserListUiStateChanged.send(UserListUiState.Error(result.message ?: "Unknown Error"))
+                        _onUserListUiStateChanged.send(
+                            UserListUiState.Error(
+                                result.message ?: "Unknown Error",
+                            ),
+                        )
                     }
 
                     is ResourceState.Success -> {

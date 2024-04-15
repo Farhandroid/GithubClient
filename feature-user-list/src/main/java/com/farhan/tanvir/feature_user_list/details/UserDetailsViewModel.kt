@@ -1,6 +1,5 @@
 package com.farhan.tanvir.feature_user_list.details
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewModelScope
@@ -43,7 +42,7 @@ class UserDetailsViewModel
             getUserRepository()
         }
 
-        private fun getUserDetails() =
+        internal fun getUserDetails() =
             viewModelScope.launch(dispatcher) {
                 _onUserDetailsUiStateChanged.send(UserDetailsUiState.Loading)
                 when (val result = getUserDetailsUseCase.invoke(userName)) {
@@ -61,7 +60,7 @@ class UserDetailsViewModel
                 }
             }
 
-        private fun getUserRepository() =
+        internal fun getUserRepository() =
             viewModelScope.launch(dispatcher) {
                 when (val result = getUserRepositoryUseCase.invoke(userName)) {
                     is ResourceState.Error -> {
@@ -73,7 +72,6 @@ class UserDetailsViewModel
                     }
 
                     is ResourceState.Success -> {
-                        Log.d("userLog", "getUserRepository: ${result.data}")
                         _onUserRepositoryReceived.send(result.data)
                         _onUserDetailsUiStateChanged.send(
                             UserDetailsUiState.Success,
